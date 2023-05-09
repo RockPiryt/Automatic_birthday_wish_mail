@@ -53,7 +53,8 @@ if today_tuple in birth_dict:
     #choose random letter and personalise letter (change name)
     random_number = random.randint(1,3)
     print(random_number)
-    with open(f'letter_templates/letter_{random_number}.txt') as letter_file:
+    #with open(f'letter_templates/letter_{random_number}.txt') as letter_file:
+    with open(f'letter_{random_number}.txt') as letter_file:
         picked_letter = letter_file.read()
         personalised_letter = picked_letter.replace(PLACEHOLDER, birthday_person_name)
 
