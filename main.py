@@ -4,8 +4,8 @@ import smtplib
 import random
 
 
-MY_EMAIL= "pythonermail@gmail.com"
-APP_PASSWORD_GMAIL ="guzkxmnkxvcwwzen"#kod do aplikacji z gmail
+MY_EMAIL= ""
+API_PASSWORD_GMAIL =" "
 PLACEHOLDER = f"[NAME]"
 
 ##################### CODE ######################
@@ -61,5 +61,5 @@ if today_tuple in birth_dict:
     #send letter
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user=MY_EMAIL, password=APP_PASSWORD_GMAIL)
+        connection.login(user=MY_EMAIL, password=API_PASSWORD_GMAIL)
         connection.sendmail(from_addr=MY_EMAIL, to_addrs=reciver, msg=f"Subject: Happy Birthday!\n\n{personalised_letter}" )
